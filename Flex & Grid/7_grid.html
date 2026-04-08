@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+        .box{
+            background-color: #bb8466;
+            height: 300px;
+        }
+
+        .box:nth-child(even){
+            background-color: #bb86fc;
+        }
+
+        .special-column{
+            grid-column: span 3;
+        }
+
+        .special-row{
+            grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+     <div class="grid-container">
+        <div class="box special-column">1</div>
+        <div class="box special-row">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+    </div>
+</body>
+</html>
