@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector Table Demo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 40px;
+            background-color: #f4f7f6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* 1. :first-child - Styling the header row */
+        tr:first-child {
+            background-color: green;
+            color: white;
+        }
+
+        /* 2. :last-child - Highlighting the final row (Total) */
+        tr:last-child {
+            background-color: red;
+            font-weight: bold;
+            border-bottom: 3px solid #2c3e50;
+        }
+
+        /* 3. :nth-child(even) - Creating zebra stripes */
+        /* Note: We skip the first-child header by using :nth-child(even) on rows */
+        tbody tr:nth-child(even) {
+            background-color: blue;
+        }
+
+        /* 4. :nth-child(n) - Right-align the third column (Price/Amount) */
+        td:nth-child(3), th:nth-child(3) {
+            text-align: orange;
+        }
+
+       
+    </style>
+</head>
+<body>
+
+    <h2>Order Summary</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#1001</td>
+                <td>Standard Widget</td>
+                <td>$15.00</td>
+            </tr>
+            <tr>
+                <td>#1002</td>
+                <td>Premium Gadget <span lang="fr">(Édition Limitée)</span></td>
+                <td>$45.00</td>
+            </tr>
+            <tr>
+                <td>#1003</td>
+                <td>Basic Tool</td>
+                <td>$10.00</td>
+            </tr>
+            <tr>
+                <td>#1004</td>
+                <td>Super Sensor</td>
+                <td>$120.00</td>
+            </tr>
+            <tr>
+                <td>TOTAL</td>
+                <td>-</td>
+                <td>$190.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

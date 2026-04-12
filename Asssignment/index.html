@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Padauk:wght@400;700&family=Playwrite+IE:wght@100..400&family=Poller+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* --orange : #FCA61F; */
+            --green : #1A986F;
+            --font-monsterrat : 'Montserrat', sans-serif;
+        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* font-family: var(--font-monsterrat); */
+      }
+
+      body {
+        font-family: var(--font-monsterrat);
+        padding: 40px 20px;
+      }
+
+      .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .header-title {
+        font-size: 30px;
+        font-weight: 700;
+        /* color: var(--green); */
+      }
+
+      .shop-now-btn {
+          font-size: 14px;
+          color: var(--green);
+        position: relative;
+      }
+
+      .btn-text {
+        position: relative;
+        background-color: #fff;
+        z-index: 2;
+      }
+
+      .circle {
+        width: 40px;
+        height: 40px;
+        border: var(--green) solid 1px;
+        border-radius: 50%;
+        position: absolute;
+        top: -10px;
+        left: -20px;
+        /* z-index: 50; */
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .product-card {
+        border: 1px solid var(--green);
+
+      }
+
+      .product-image img {
+        width: 100%;
+        overflow: hidden;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <h1 class="header-title">Daily Deals</h1>
+        <div class="shop-now-btn">
+          <span class="btn-text">Shop Now</span>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </header>
+<!-- Cart Section -->
+    <section class="product-grid">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="/images/tree_1.jpg" alt="">
+            </div>
+            <div class="product-info">
+                <h3>Mini Olive Tree</h3>
+                <p class="price">$ 10 USD</p>
+            </div>
+        </div>
+    </section>
+
+    .div p {}
+    <div>
+        <p></p>
+    </div>
+    .div > p {
+
+    }
+    <div>
+        <p>First</p>
+        <section>
+            <p>Second</p>
+        </section>
+    </div>
+
+    .div + p {
+
+    }
+
+    <div>
+        <p>First</p>
+        <p>Second</p>
+    </div>
+
+    <p>Third</p>
+    <p>Forth</p>
+
+    <div>
+        <p>Fifth</p>
+    </div>
+
+    <p>Sixth</p>
+    <p>Seventh</p>
+    <p>Eighth</p>
+
+    
+
+
+  </body>
+</html>
