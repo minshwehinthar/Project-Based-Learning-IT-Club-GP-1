@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Padauk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header {
+      background-color: #f8f8f8;
+      padding: 20px 0;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .icons {
+      display: flex;
+      gap: 20px;
+    }
+    /* /////////////////////////////////////////// */
+    .header-icon {
+      width: 24px;
+      height: 24px;
+    }
+    .hero {
+      position: relative;
+    }
+
+    .hero-image {
+      width: 100%;
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 10%;
+      color: #fff;
+      margin: 0 80px;
+    }
+
+    .hero-title {
+      font-size: 4rem; /* Makes it big like the screenshot */
+      font-weight: 900;
+      line-height: 1.1;
+      text-transform: none;
+    }
+
+    .hero-description {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    /* //////////////////////////////////////// */
+/* Section Setup */
+.shop-category {
+  padding: 80px 0;
+}
+
+.category-intro h2 {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.category-description {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+/* The Grid */
+.category-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 15px; 
+}
+
+/* The Card Container */
+.category-card {
+  position: relative; 
+  border-radius: 12px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.category-images {
+  position: absolute;
+  width: 300%;
+    top: 0%;
+    right: -150%;
+}
+
+/* Text inside the box (Bottom Left) */
+.category-label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  pointer-events: none; /* Clicks go through to the card */
+}
+
+/* Footer Link Styling */
+.category-footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.category-footer p {
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.view-all-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 3px;
+}
+  </style>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <div>
+          <img src="/images/Logo.png" alt="" />
+        </div>
+        <div>
+          <nav class="nav">
+            <a class="nav-link" href="#">HOME</a>
+            <a class="nav-link" href="#">PRODUCTS</a>
+            <a class="nav-link" href="#">ABOUT</a>
+            <a class="nav-link" href="#">FAQ</a>
+            <a class="nav-link" href="#">CONTACT</a>
+          </nav>
+        </div>
+        <div class="icons">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="header-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="header-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+              />
+            </svg>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="header-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+              />
+            </svg>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="header-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <img class="hero-image" src="/images/hero-image.png" alt="" />
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-title">Own Your Look</h1>
+        <h1 class="hero-title">Own Your Moment</h1>
+        <p class="hero-description">
+          Step into outfits that bring comfort, confidence, and a sense of
+          belonging
+        </p>
+      </div>
+    </section>
+
+<section class="shop-category container">
+  <div class="category-intro">
+    <h2 class="category-title">SHOP BY CATEGORY</h2>
+    <p class="category-description">
+      Explore our collections and find the perfect pieces for every moment.
+    </p>
+  </div>
+
+  <div class="category-row">
+    <div class="category-card">
+      <div class="image-box">
+        <img class="category-images" src="/images/t-shirt-category.png" alt="Shirts" />
+      </div>
+      <h3 class="category-label">Shirts</h3>
+    </div>
+
+    <div class="category-card">
+      <div class="image-box">
+        <img class="category-images" src="/images/sweater-category.png" alt="Sweatshirts" />
+      </div>
+      <h3 class="category-label">Sweatshirts</h3>
+    </div>
+
+    <div class="category-card">
+      <div class="image-box">
+        <img class="category-images" src="/images/hoodie-category.png" alt="Hoodies" />
+      </div>
+      <h3 class="category-label">Hoodies</h3>
+    </div>
+
+    <div class="category-card">
+      <div class="image-box">
+        <img class="category-images" src="/images/jacket-category.png" alt="Jackets" />
+      </div>
+      <h3 class="category-label">Jackets</h3>
+    </div>
+  </div>
+
+  <div class="category-footer">
+    <p>Explore Our Collection – Find Exactly What You're Looking For</p>
+    <a href="#" class="view-all-link">View all categories <span>&#8599;</span></a>
+  </div>
+</section>
+  </body>
+</html>
