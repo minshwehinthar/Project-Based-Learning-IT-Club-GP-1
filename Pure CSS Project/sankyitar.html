@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Padauk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .home{
+        background-color: red;
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .room-1{
+        background-color: green;
+        width: 100px;
+        height: 100px;
+      }
+
+      .room-2{
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+      }
+
+      .room-3{
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+        /* position: relative; */
+      }
+
+      .fan{
+        background-color: gray;
+        width:20px;
+        height: 20px;
+        border: 1px solid black;
+        border-radius: 2px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="home">
+      <div class="room-1">
+        1
+        
+      </div>
+      <div class="room-2">2</div>
+      <div class="room-3">3
+        <p class="fan"></p>
+      </div>
+    </div>
+  </body>
+</html>
