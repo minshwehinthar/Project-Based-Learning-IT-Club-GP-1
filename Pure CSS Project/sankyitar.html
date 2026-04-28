@@ -8,6 +8,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Padauk:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 
     <style>
       * {
@@ -32,6 +34,7 @@
         background-color: green;
         width: 100px;
         height: 100px;
+        position: relative;
       }
 
       .room-2{
@@ -44,15 +47,14 @@
         background-color: yellow;
         width: 100px;
         height: 100px;
-        /* position: relative; */
       }
 
       .fan{
-        background-color: gray;
-        width:20px;
+        width: 20px;
         height: 20px;
-        border: 1px solid black;
-        border-radius: 2px;
+        position: absolute;
+        top: 20px;
+        left:20px;
       }
     </style>
 
@@ -61,11 +63,10 @@
     <div class="home">
       <div class="room-1">
         1
-        
+        <p class="fan"><i class="fa-solid fa-fan"></i></p>
       </div>
       <div class="room-2">2</div>
       <div class="room-3">3
-        <p class="fan"></p>
       </div>
     </div>
   </body>
